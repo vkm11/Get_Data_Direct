@@ -8,7 +8,7 @@
         </div>
 
         <div class="mb-4">
-            <vs-table :data="kycreport">
+            <vs-table stripe search :data="kycreport">
                 <template slot="thead"> 
                     <vs-th>No</vs-th> 
                     <vs-th>Agency Name</vs-th> 
