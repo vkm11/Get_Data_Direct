@@ -9,6 +9,9 @@
             <!-- <vs-button>
                 <vue-json-to-csv :json-data=jsondata>Export CSV</vue-json-to-csv>
             </vs-button> -->
+             <vs-button class="m-3" style="float:right" :disabled="kycreport == ''">
+                <vue-json-to-csv :json-data=kycreport>Export CSV</vue-json-to-csv>
+            </vs-button>
         </div>
 
         <div class="mb-4" ref="content">
@@ -44,11 +47,11 @@
 
 <script>
 import axios from 'axios'; 
-
+import VueJsonToCsv from 'vue-json-to-csv';
 export default {
     name:"KYC-Report",
     components:{
-        
+        VueJsonToCsv
     },
     data(){
         return{
